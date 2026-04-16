@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: netflix-app
-  namespace: default   # ✅ ADD THIS
+  namespace: default
   labels:
     app: netflix-app
 spec:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: netflix-app
-        image: sevenajay/netflix:latest
+        image: saiprakash305/netflix:latest   # ✅ YOUR IMAGE
         ports:
-        - containerPort: 80   # ✅ ALSO FIXED (missing before)
+        - containerPort: 80
